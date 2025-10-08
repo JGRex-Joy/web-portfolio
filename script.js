@@ -1,3 +1,14 @@
+// Переключатель темы 
+const themeToggle = document.getElementById('theme-toggle');
+let isLightMode = false;
+
+themeToggle.addEventListener('click', () => {
+  isLightMode = !isLightMode;
+  document.body.classList.toggle('light-mode', isLightMode);
+  themeToggle.textContent = isLightMode ? '☀️' : '🌙';
+});
+
+
 // Плавный скролл по секциям 
 document.querySelectorAll('.nav-links a').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
@@ -19,6 +30,7 @@ glowTargets.forEach(el => {
   });
 });
 
+
 // Эффект печатающегося текста в заголовке 
 const typingText = document.querySelector('.header-text h1 span');
 const textContent = typingText.textContent;
@@ -33,6 +45,7 @@ function typeEffect() {
   }
 }
 window.addEventListener('load', typeEffect);
+
 
 // Частички на заднем фоне
 const canvas = document.createElement('canvas');
@@ -85,6 +98,7 @@ function animateParticles() {
 }
 animateParticles();
 
+
 // Валидация формы 
 function handleSubmit(event) {
   event.preventDefault();
@@ -93,17 +107,17 @@ function handleSubmit(event) {
   const message = document.querySelector('.contact-form textarea').value.trim();
 
   if (!name || !email || !message) {
-    alert('Please fill in all fields.');
+    alert('Please fill in all fields');
     return false;
   }
 
   const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
   if (!email.match(emailPattern)) {
-    alert('Invalid email address.');
+    alert('Invalid email address');
     return false;
   }
 
-  alert(`✅ Thank you, ${name}! Your message has been sent successfully.`);
+  alert(`Thank you, ${name}! Your message has been sent successfully`);
   event.target.reset();
   return true;
 }

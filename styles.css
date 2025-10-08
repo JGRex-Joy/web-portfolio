@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: background-color 0.6s ease, color 0.6s ease, border-color 0.6s ease;
 }
 
 body {
@@ -9,6 +10,7 @@ body {
   background: #0a0a0a;
   color: #fff;
   line-height: 1.6;
+  transition: background-color 0.6s ease, color 0.6s ease;
 }
 
 a {
@@ -301,7 +303,7 @@ a {
   color: #666;
 }
 
-/* Адаптив */
+/* Adaptive */
 @media (max-width: 992px) {
   .header-content,
   .about-content,
@@ -361,7 +363,7 @@ a {
   }
 }
 
-/* Анимации появления элементов */
+/* Element's animation */
 .header-text h1, .subtitle, .buttons, .project, .about-text, .skills span, .contact-left, .contact-form {
   opacity: 0;
   transform: translateY(20px);
@@ -376,7 +378,7 @@ a {
   }
 }
 
-/* Анимация кнопок */
+/* Button's animation */
 .btn, .btn-outline {
   transition: all 0.3s ease;
 }
@@ -386,7 +388,7 @@ a {
   box-shadow: 0 8px 20px rgba(160, 200, 0, 0.5);
 }
 
-/* Анимация проектов */
+/* Projects' animation */
 .project {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -396,7 +398,7 @@ a {
   box-shadow: 0 15px 25px rgba(160, 200, 0, 0.3);
 }
 
-/* Социальные иконки */
+/* Socials' animation */
 .socials img {
   transition: transform 0.3s ease, filter 0.3s ease;
 }
@@ -421,4 +423,62 @@ a {
 @keyframes fadeTrail {
   from { opacity: 1; transform: scale(1); }
   to { opacity: 0; transform: scale(0.5); }
+}
+
+/* Theme toggle*/
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: #fff;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 8px #d3e97a);
+}
+
+body.light-mode {
+  background: #ffffff;
+  color: #000000;
+}
+
+body.light-mode * {
+  color: #000 !important;
+}
+
+body.light-mode .btn,
+body.light-mode .btn-outline:hover {
+  background: #d3e97a;
+  color: #000;
+}
+
+body.light-mode .btn-outline {
+  border: 2px solid #d3e97a;
+  color: #000;
+}
+
+body.light-mode .btn:hover {
+  background: #a0c800;
+}
+
+body.light-mode .skills span {
+  border-color: #a0c800;
+  color: #000 !important;
+}
+
+body.light-mode .project-link,
+body.light-mode .contact-resume a {
+  color: #a0c800 !important;
+}
+
+body.light-mode .footer {
+  border-top: 1px solid #ddd;
+  color: #555 !important;
+}
+
+body.light-mode .theme-toggle {
+  color: #000 !important;
 }
