@@ -360,3 +360,65 @@ a {
     text-align: center;
   }
 }
+
+/* Анимации появления элементов */
+.header-text h1, .subtitle, .buttons, .project, .about-text, .skills span, .contact-left, .contact-form {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Анимация кнопок */
+.btn, .btn-outline {
+  transition: all 0.3s ease;
+}
+
+.btn:hover, .btn-outline:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(160, 200, 0, 0.5);
+}
+
+/* Анимация проектов */
+.project {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(160, 200, 0, 0.3);
+}
+
+/* Социальные иконки */
+.socials img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.socials img:hover {
+  transform: scale(1.2) rotate(5deg);
+  filter: drop-shadow(0 0 8px #a0c800);
+}
+
+.cursor-trail {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #d3e97a;
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: 0 0 10px #d3e97a;
+  transform: translate(-50%, -50%);
+  animation: fadeTrail 0.4s ease-out;
+}
+
+@keyframes fadeTrail {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(0.5); }
+}
