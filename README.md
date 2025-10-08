@@ -16,11 +16,20 @@
 
 ---
 
+## Особенности
+- Плавный скролл по секциям
+- Переключение светлой/тёмной темы
+- Анимации кнопок и заголовков
+- Частички на фоне
+- Валидация формы контактов
+
+---
+
 ## Структура проекта
-- assets/     # изображения, иконки, шрифты
-- index.html  # главная страница
-- styles.css  # стили сайта
-- script.js   # JS для интерактивности 
+- assets/     - изображения, иконки, шрифты
+- index.html  - главная страница
+- styles.css  - стили сайта
+- script.js   - JS для интерактивности 
 
 ---
 
@@ -39,7 +48,11 @@ git clone https://github.com/JGRex-Joy/web-portfolio.git
 ---
 
 ## Скриншоты
-*вставлю свой скриншот*
+![Главная страница](screenshots/main.png)
+![Проекты](screenshots/projects.png)
+![О себе](screenshots/aboutme.png)
+![Коннектиться](screenshots/letsconnect.png)
+![Светлая тема](screenshots/light.png)
 
 ---
 
